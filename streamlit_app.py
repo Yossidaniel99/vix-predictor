@@ -72,7 +72,7 @@ st.markdown("""
 @st.cache_data(ttl=60*60*4, show_spinner=False)   # cache 4 hours
 def fetch_signal(use_live: bool, api_key: str | None):
     if use_live and api_key:
-        return get_signal_live(twelvedata_api_key=d839f361ddf14d4b9824fb55b41bdab0)
+        return get_signal_live(twelvedata_api_key=api_key)
     return get_signal_yfinance()
 
 
