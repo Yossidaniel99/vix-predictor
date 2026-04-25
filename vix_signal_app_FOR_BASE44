@@ -715,7 +715,7 @@ if __name__ == "__main__":
     # In production, set this in your environment / Base44 secrets:
     api_key = os.environ.get("TWELVEDATA_KEY")
     if api_key:
-        sig = get_signal_live(twelvedata_api_key=d839f361ddf14d4b9824fb55b41bdab0)
+        sig = get_signal_live(twelvedata_api_key=api_key)
     else:
         # Fall back to yfinance (dev only)
         sig = get_signal_yfinance()
